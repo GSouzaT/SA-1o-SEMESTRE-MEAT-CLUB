@@ -1,4 +1,3 @@
-
 var nomeCadastrado = document.getElementById("nomeDeCadastro")
 var enderecoCadastrado = document.getElementById("enderecoDeCadastro")
 var emailCadastrado = document.getElementById("emailDeCasdastro")
