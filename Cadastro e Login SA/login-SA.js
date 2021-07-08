@@ -1,15 +1,15 @@
-var nomeCadastrado = document.getElementById("nomeDeCadastro")
-var enderecoCadastrado = document.getElementById("enderecoDeCadastro")
-var emailCadastrado = document.getElementById("emailDeCasdastro")
-var senhaCadastrada = document.getElementById("senhaDeCadastro")
+let nomeCadastrado = document.getElementById("nomeDeCadastro")
+let enderecoCadastrado = document.getElementById("enderecoDeCadastro")
+let emailCadastrado = document.getElementById("emailDeCasdastro")
+let senhaCadastrada = document.getElementById("senhaDeCadastro")
 
-var emailSalvo = document.getElementById ("email_Login")
-var senhaSalva = document.getElementById ("senha_Login")
+let emailSalvo = document.getElementById ("email_Login")
+let senhaSalva = document.getElementById ("senha_Login")
 
-var arrayNomes = []
-var arrayEndereco = []
-var arrayEmail = []
-var arraySenhas = []
+let arrayNomes = []
+let arrayEndereco = []
+let arrayEmail = []
+let arraySenhas = []
 
 function Cadastrar () {
 
@@ -50,7 +50,7 @@ function Logar() {
     arrayEmail = JSON.parse(localStorage.getItem("emailCadastrado"))
     arraySenhas = JSON.parse(localStorage.getItem("senhaCadastrada"))
 
-    var logar = 0
+    let logar = 0
 
     for(i=0; i < arrayEmail.length; i++){
 
