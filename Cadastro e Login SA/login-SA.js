@@ -13,7 +13,7 @@ var arraySenhas = []
 
 function Cadastrar () {
 
-    pegaDoLocalStorage()
+    PegaDoLocalStorage()
 
     if (arrayNomes == null){
 
@@ -27,7 +27,7 @@ function Cadastrar () {
         arrayEmail.push (emailCadastrado.value)
         arraySenhas.push (senhaCadastrada.value)
             
-        mandaProLocalStorage()
+        MandaProLocalStorage()
 
     } else {
            
@@ -36,7 +36,7 @@ function Cadastrar () {
         arrayEmail.push (emailCadastrado.value)
         arraySenhas.push (senhaCadastrada.value)
         
-        mandaProLocalStorage()
+        MandaProLocalStorage()
 
         }
     alert ("Cadastro realizado")
@@ -71,7 +71,7 @@ function Logar() {
 
 }
 
-function pegaDoLocalStorage(){
+function PegaDoLocalStorage(){
 
     arrayNomes = JSON.parse(localStorage.getItem("nome", nomeCadastrado))
     arrayEndereco = JSON.parse(localStorage.getItem("endereço", enderecoCadastrado))
@@ -80,7 +80,7 @@ function pegaDoLocalStorage(){
 
 }
 
-function mandaProLocalStorage(){
+function MandaProLocalStorage(){
     
     localStorage.setItem("nome", JSON.stringify(nomeCadastrado.value))
     localStorage.setItem("endereço", JSON.stringify(enderecoCadastrado.value))
