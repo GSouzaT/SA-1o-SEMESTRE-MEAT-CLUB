@@ -1,19 +1,19 @@
-let nomeCadastrado = document.getElementById("nomeDeCadastro")
-let enderecoCadastrado = document.getElementById("enderecoDeCadastro")
-let emailCadastrado = document.getElementById("emailDeCasdastro")
-let senhaCadastrada = document.getElementById("senhaDeCadastro")
+var nomeCadastrado = document.getElementById("nomeDeCadastro")
+var enderecoCadastrado = document.getElementById("enderecoDeCadastro")
+var emailCadastrado = document.getElementById("emailDeCasdastro")
+var senhaCadastrada = document.getElementById("senhaDeCadastro")
 
-let emailSalvo = document.getElementById ("email_Login")
-let senhaSalva = document.getElementById ("senha_Login")
+var emailSalvo = document.getElementById ("email_Login")
+var senhaSalva = document.getElementById ("senha_Login")
 
-let arrayNomes = []
-let arrayEndereco = []
-let arrayEmail = []
-let arraySenhas = []
+var arrayNomes = []
+var arrayEndereco = []
+var arrayEmail = []
+var arraySenhas = []
 
 function Cadastrar () {
 
-    pegaDoLocalStorage()
+    PegaDoLocalStorage()
 
     if (arrayNomes == null){
 
@@ -27,7 +27,7 @@ function Cadastrar () {
         arrayEmail.push (emailCadastrado.value)
         arraySenhas.push (senhaCadastrada.value)
             
-        mandaProLocalStorage()
+        MandaProLocalStorage()
 
     } else {
            
@@ -36,7 +36,7 @@ function Cadastrar () {
         arrayEmail.push (emailCadastrado.value)
         arraySenhas.push (senhaCadastrada.value)
         
-        mandaProLocalStorage()
+        MandaProLocalStorage()
 
         }
     alert ("Cadastro realizado")
@@ -50,7 +50,7 @@ function Logar() {
     arrayEmail = JSON.parse(localStorage.getItem("emailCadastrado"))
     arraySenhas = JSON.parse(localStorage.getItem("senhaCadastrada"))
 
-    let logar = 0
+    var logar = 0
 
     for(i=0; i < arrayEmail.length; i++){
 
@@ -71,7 +71,7 @@ function Logar() {
 
 }
 
-function pegaDoLocalStorage(){
+function PegaDoLocalStorage(){
 
     arrayNomes = JSON.parse(localStorage.getItem("nome", nomeCadastrado))
     arrayEndereco = JSON.parse(localStorage.getItem("endereço", enderecoCadastrado))
@@ -80,7 +80,7 @@ function pegaDoLocalStorage(){
 
 }
 
-function mandaProLocalStorage(){
+function MandaProLocalStorage(){
     
     localStorage.setItem("nome", JSON.stringify(nomeCadastrado.value))
     localStorage.setItem("endereço", JSON.stringify(enderecoCadastrado.value))
