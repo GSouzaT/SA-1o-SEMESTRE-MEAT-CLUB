@@ -16,39 +16,35 @@ var arraySenhas = []
 function Cadastrar() {
 
     PegaDoLocalStorage()
-
-    if (arrayNomes == null){
-
-        arrayNomes = []
-        arrayEndereco = []
-        arrayEmail = []
-        arraySenhas = []
-        
-        arrayNomes.push (nomeCadastrado.value)    
-        arrayEndereco.push (enderecoCadastrado.value)
-        arrayEmail.push (emailCadastrado.value)
-        arraySenhas.push (senhaCadastrada.value)
-            
-        MandaProLocalStorage()
-
-    } else {
-           
-        arrayNomes.push (nomeCadastrado.value)    
-        arrayEndereco.push (enderecoCadastrado.value)
-        arrayEmail.push (emailCadastrado.value)
-        arraySenhas.push (senhaCadastrada.value)
-        
-        MandaProLocalStorage()
-
-    }
-
     if(senhaCadastrada.value != senhaRepetida.value){
         alert ("Senhas não conferem")
-        
-    } else{
-        alert ("Cadastro realizado")
-    }
 
+    }   if (arrayNomes == null){
+
+            arrayNomes = []
+            arrayEndereco = []
+            arrayEmail = []
+            arraySenhas = []
+        
+            arrayNomes.push (nomeCadastrado.value)    
+            arrayEndereco.push (enderecoCadastrado.value)
+            arrayEmail.push (emailCadastrado.value)
+            arraySenhas.push (senhaCadastrada.value)
+                
+            MandaProLocalStorage()
+
+        } else {
+            
+            arrayNomes.push (nomeCadastrado.value)    
+            arrayEndereco.push (enderecoCadastrado.value)
+            arrayEmail.push (emailCadastrado.value)
+            arraySenhas.push (senhaCadastrada.value)
+            
+            MandaProLocalStorage()
+
+        }
+    
+    alert ("Cadastro realizado")
     window.location.href='link pagina principal'
 
 }
