@@ -3,13 +3,14 @@ const senhaLogin = document.getElementById("senhaLogin")
 
 const keyUsuario = "usuario"
 
-function Logar(){
+function Logar() {
     let usuariosCadastrados = ObtemUsuariosCadastrados()
     for(i = 0; i < usuariosCadastrados.length; i++){
-        let usuario = usuariosCadastrados[i];
+        const usuario = usuariosCadastrados[i];
 
         if(usuario.email == emailLogin.value && usuario.senha == senhaLogin.value) {
-            window.location.href="meatClub.html"
+            localStorage.setItem("conectado", JSON.stringify(usuario));
+            window.location.href = "meatClub.html"
             return;
         }
     }

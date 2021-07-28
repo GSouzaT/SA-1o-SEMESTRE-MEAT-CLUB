@@ -16,7 +16,7 @@ function CriaProdutos() {
 
     for(let i = 0; i < cervejas.length; i++) {
         let cerveja = cervejas[i];
-        CriaProduto("undefinid", cerveja.preco, cerveja.quantidade);
+        CriaProduto(cerveja.nomeCerveja, cerveja.preco, cerveja.quantidade);
     }
 }
 

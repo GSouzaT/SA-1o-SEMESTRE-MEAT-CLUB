@@ -14,6 +14,7 @@ function CadastrarPorElementos(){
         alert("Todos os campos são obrigatórios!")
         return
     } 
+
     let usuario = {
         // Pessoa
         nome: nomeUsuario.value,
@@ -25,27 +26,26 @@ function CadastrarPorElementos(){
         senhaConfirmada: senhaConfirmadaCadastro.value
     }
 
-    let emailExistente = VerificaEmailExistente()
+    let emailExistente = VerificaEmailExistente(emailUsuario.value);
     if(emailExistente == true){
-        alert("Já possui um cadastro com esse email!")
+        alert("Já possui um cadastro com esse email!");
         return
     }
 
     let senhaConfirmada = ConfirmaSenha(usuario.senha, usuario.senhaConfirmada);
     if(senhaConfirmada == false) {
-        alert(`As senhas não conferem!\nDigite a senha novamente`)
+        alert(`As senhas não conferem!\n Digite a senha novamente`);
         return;
     }
 
-    alert('Cadastro realizado!')
+    alert('Cadastro realizado!');
     Cadastrar(usuario.nome, usuario.cpf, usuario.email, usuario.senha);
     SalvarUsuarios();
-    window.location.href="meatClub.html"
+    window.location.href = "meatClub.html";
 }
 
-// Pura lógica - backend
+// Pura lógica
 function Cadastrar(nome, cpf, email, senha) {
-    // TESTE
     let usuario = {
         nome: nome,
         cpf: cpf,
@@ -60,7 +60,7 @@ function SalvarUsuarios() {
     localStorage.setItem(keyUsuario, JSON.stringify(usuariosCadastrados))
 }
 
-function ObtemUsuariosCadastrados(){
+function ObtemUsuariosCadastrados() {
     let usuario = JSON.parse(localStorage.getItem(keyUsuario))
     if(usuario == null){
         return new Array()
@@ -68,20 +68,21 @@ function ObtemUsuariosCadastrados(){
     return usuario
 }
 
-function VerificaEmailExistente(email, emailInput){
+function VerificaEmailExistente(emailInputValue) {
     let usuariosCadastrados = ObtemUsuariosCadastrados()
-    for(i = 0; i < usuariosCadastrados.length; i++){
-        let usuario = usuariosCadastrados[i]
-        if(usuario.email == emailUsuario.value){
+    for(i = 0; i < usuariosCadastrados.length; i++) {
+        const usuario = usuariosCadastrados[i]
+        if(usuario.email == emailInputValue) {
             return true
         }
     }
+
     return false
 }
 function ConfirmaSenha(senha, senhaConfirmada){
     return senha === senhaConfirmada
 }
 
-function PularCadastro(){
-    window.location.href="telaLogin.html"
+function PularCadastro() {
+    window.location.href = "telaLogin.html"
 }

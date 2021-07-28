@@ -30,7 +30,7 @@ function RemoveAmount(id) {
     inputAmount.value = quantidade;
 }
 
-function AddCerveja(id, preco) {
+function AddCerveja(id, nomeCerveja, preco) {
     const quantidade = Number(inputsAmounts[id].value);
     
     if(quantidade <= 0) {
@@ -39,6 +39,7 @@ function AddCerveja(id, preco) {
 
     const cerveja = {
         id: id,
+        nomeCerveja: nomeCerveja,
         quantidade: quantidade,
         preco: Number(preco),
     }
