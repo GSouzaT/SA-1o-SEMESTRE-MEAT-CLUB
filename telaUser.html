@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Club - Cervejas</title>
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Twelfth navbar example">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="meatClub.html">Meat Club</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaPlanos.html">Planos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaCervejas.html">Cervejas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrinho.html">Carrinho</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaCadastro.html">Cadastre-se</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaLogin.html">Login</a>
+            </li>
+            <li>
+              <a class="nav-link" href="telaUser.html">Perfil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <label><b>Email do Usuário</b> </label>
+    <br>
+    <input id = "emailLogin" type = "text" class="btn btn-outline-secondary" placeholder="Usuário"></input>
+    <br><br>
+    <label><b>Senha do Usuário</b></label>
+    <br>
+    <input id = "senhaLogin" type = "password" class="btn btn-outline-secondary" placeholder="Senha"></input>
+    <br><br>
+    <button onclick = "Atualizar();" type="button" class="btn btn-warning"><b>Alterar dados</b></button>
+    <button onclick="ExcluirUser();" type="button" class="btn btn-warning"><b>Excluir conta</b></button><br><br>
+    <label><b>Histórico de compras</b></label><br>
+    <button onclick="" type="button" class="btn btn-warning"><b>Listar</b></button>
+
+  </div>
+  <div id="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">compra</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Preço (R$)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Köhler Porter</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+          <tr>
+              <td>0</td>
+            <td>Köhler Pale Ale</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+          <tr>
+              <td>1</td>
+            <td>Köhler Pilsen</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Köhler Porter</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+          <tr>
+              <td>1</td>
+            <td>Köhler Pale Ale</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+          <tr>
+              <td>2</td>
+            <td>Köhler Pilsen</td>
+            <td>1</td>
+            <td>R$ 16.00</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <footer class="fundo">
+    <p class="total">Total R$: 48.00</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="carrinho.js"></script>
+</body>
+</html>

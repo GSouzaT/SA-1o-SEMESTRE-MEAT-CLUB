@@ -19,22 +19,22 @@
               <a class="nav-link" href="meatClub.html">Meat Club</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="sobreNos.html">Desenvolvedores</a>
+              <a class="nav-link" href="telaPlanos.html">Planos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="telaPlanos.html">Planos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="telaCervejas.html" tabindex="-1">Cervejas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="telaCadastro.html" tabindex="-1">Cadastre-se</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="telaLogin.html" tabindex="-1">Login</a>
+              <a class="nav-link active" href="telaCervejas.html">Cervejas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="carrinho.html">Carrinho</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaCadastro.html">Cadastre-se</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaLogin.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="telaUser.html">Perfil</a>
             </li>
           </ul>
         </div>
@@ -51,10 +51,10 @@
                   <div class="card-body" style="height: 260px;">
                     <p>Coloração escura, possui marcantes sabores de malte e café torrado, dando um amargor diferenciado</p>
                     <h4 class="card-title pricing-card-title">R$16<small class="text-muted fw-light">/600ml</small></h4>
-                    <button type="button" class="w-10 btn btn-warning">-</button>
-                    <input type="number" value="0" style="max-width: 90px; text-align: center;"/>
-                    <button type="button" class="w-10 btn btn-warning">+</button>
-                    <button type="button" class="w-75 btn btn-warning" style="margin-top: 20px;">Adicionar pro carrinho</button>
+                    <button type="button" class="w-10 btn btn-warning" onclick="RemoveAmount(0);">-</button>
+                    <input type="number" value="0" name="amount" style="max-width: 90px; text-align: center;"/>
+                    <button type="button" class="w-10 btn btn-warning" onclick="AddAmount(0);">+</button>
+                    <button type="button" class="w-75 btn btn-warning" onclick="AddCerveja(0, 'Köhler Porter', 16.00);" style="margin-top: 20px;">Adicionar pro carrinho</button>
                   </div>
                 </div>
             </div>
@@ -64,12 +64,12 @@
                   <h4 class="my-0 fw-normal">Köhler Pale Ale</h4>
                 </div>
                 <div class="card-body" style="height: 260px;">
-                  <p>Essa cerveja traz sabor citrico e amargor agradável, equilibrada e de final marcante</p>
+                  <p>Essa cerveja traz sabor cítrico e amargor agradável, equilibrada e de final marcante</p>
                   <h4 class="card-title pricing-card-title">R$16<small class="text-muted fw-light">/600ml</small></h4> 
-                    <button type="button" class="w-10 btn btn-warning">-</button>
-                    <input type="number" value="0" style="max-width: 90px; text-align: center;"/>
-                    <button type="button" class="w-10 btn btn-warning">+</button>
-                    <button type="button" class="w-75 btn btn-warning" style="margin-top: 20px;">Adicionar pro carrinho</button>
+                    <button type="button" class="w-10 btn btn-warning" onclick="RemoveAmount(1);">-</button>
+                    <input type="number" value="0" name="amount" style="max-width: 90px; text-align: center;"/>
+                    <button type="button" class="w-10 btn btn-warning" onclick="AddAmount(1);">+</button>
+                    <button type="button" class="w-75 btn btn-warning" onclick="AddCerveja(1, 'Köhler Pale Ale', 16.00);" style="margin-top: 20px;">Adicionar pro carrinho</button>
                 </div>
               </div>
           </div>
@@ -81,10 +81,10 @@
                 <div class="card-body" style="height: 260px;">
                   <p>Leve, de cor dourada, baixa fermentação, suavemente amarga e médio teor alcoólico</p>
                   <h4 class="card-title pricing-card-title">R$16<small class="text-muted fw-light">/600ml</small></h4>
-                  <button type="button" class="w-10 btn btn-warning">-</button>
-                  <input type="number" value="0" style="max-width: 90px; text-align: center;"/>
-                  <button type="button" class="w-10 btn btn-warning">+</button>
-                  <button type="button" class="w-75 btn btn-warning" style="margin-top: 20px;">Adicionar pro carrinho</button>
+                  <button type="button" class="w-10 btn btn-warning" onclick="RemoveAmount(2);">-</button>
+                  <input type="number" value="0" name="amount" style="max-width: 90px; text-align: center;"/>
+                  <button type="button" class="w-10 btn btn-warning" onclick="AddAmount(2);">+</button>
+                  <button type="button" class="w-75 btn btn-warning" onclick="AddCerveja(2, 'Köhler Pilsen', 16.00);" style="margin-top: 20px;">Adicionar pro carrinho</button>
                 </div>
               </div>
             </div>
@@ -94,12 +94,12 @@
                   <h4 class="my-0 fw-normal">Köhler Vienna</h4>
                 </div>
                 <div class="card-body" style="height: 260px;">
-                  <P>Caracterizada por uma Maltagem suave e elegante que seca no final, para evitar que se torne adocicada</P>
+                  <P>Caracterizada por uma maltagem suave e elegante que seca no final, para evitar que se torne adocicada</P>
                   <h4 class="card-title pricing-card-title">R$16<small class="text-muted fw-light">/600ml</small></h4>
-                  <button type="button" class="w-10 btn btn-warning">-</button>
-                  <input type="number" value="0" style="max-width: 90px; text-align: center;"/>
-                  <button type="button" class="w-10 btn btn-warning">+</button>
-                  <button type="button" class="w-75 btn btn-warning" style="margin-top: 20px;">Adicionar pro carrinho</button>
+                  <button type="button" class="w-10 btn btn-warning" onclick="RemoveAmount(3);">-</button>
+                  <input type="number" value="0" name="amount" style="max-width: 90px; text-align: center;"/>
+                  <button type="button" class="w-10 btn btn-warning" onclick="AddAmount(3);">+</button>
+                  <button type="button" class="w-75 btn btn-warning" onclick="AddCerveja(3, 'Köhler Vienna', 16.00);" style="margin-top: 20px;">Adicionar pro carrinho</button>
                 </div>
               </div>
             </div>
